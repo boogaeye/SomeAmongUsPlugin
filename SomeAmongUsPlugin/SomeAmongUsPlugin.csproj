@@ -43,8 +43,8 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\..\..\..\Downloads\Il2CppDumper-v6.4.12\DummyDll\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx">
-      <HintPath>Libs\BepInEx.dll</HintPath>
+    <Reference Include="BepInEx.Core">
+      <HintPath>..\..\..\..\Desktop\CodeIsNotAmongUs\BepInEx\core\BepInEx.Core.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx.Harmony">
       <HintPath>..\..\..\..\Desktop\CodeIsNotAmongUs\BepInEx\core\BepInEx.Harmony.dll</HintPath>
