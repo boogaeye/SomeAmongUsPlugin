@@ -20,7 +20,10 @@ namespace SomeAmongUsPlugin
         public ConfigEntry<int> killCooldown { get; set; }
         public ConfigEntry<float> walkSpeed { get; set; }
         public ConfigEntry<bool> allowInfection { get; set; }
-        public ConfigEntry<bool> unknownImposters { get; set; } //all imposters will have white names and can kill each other if enabled
+        public ConfigEntry<bool> individualImposters { get; set; } //all imposters will have white names and can kill each other if enabled
+        public ConfigEntry<bool> anyColorAllowed { get; set; } //allows players you be any color in among us
+        public ConfigEntry<bool> allowReporting { get; set; } //if false the report button will be inactive
+        public ConfigEntry<bool> allowVenting { get; set; } //this will also disable sab.
         public override void Load()
         {
             playerMax = Config.Bind("Custom Room", "Max Players", 10);
@@ -28,7 +31,10 @@ namespace SomeAmongUsPlugin
             killCooldown = Config.Bind("Custom Room", "Kill Cooldown", 10);
             walkSpeed = Config.Bind("Custom Room", "Walking Speed", 1.5f);
             allowInfection = Config.Bind("Custom Gamemode", "Infection", false);
-            unknownImposters = Config.Bind("Imposter Settings", "Unknown Imposters", false);
+            individualImposters = Config.Bind("Imposter Settings", "Individual Imposters", false);
+            anyColorAllowed = Config.Bind("Custom Room", "Allow All Colors for players", true);
+            allowReporting = Config.Bind("Player Settings", "Reporting Allowed", true);
+            allowVenting = Config.Bind("Imposter Settings", "Allow Venting/Sabotage", true);
         }
     }
 }
